@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:orientation="vertical"
+        android:tag="trueLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1">
+        <TableLayout
+            android:id="@+id/table4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom= "true"
+            android:padding="3dip"
+            android:stretchColumns="*">
+            <TableRow>
+                <Button
+                    android:id="@+id/turn_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="反手"
+                    android:textSize="24sp" />
+                <Button
+                    android:id="@+id/close_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="平仓"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/sell_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="卖出"
+                    android:textColor="#FD1302"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/open_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTintMode="add"
+                    android:text="买入"
+                    android:textColor="#4CAF50"
+                    android:textSize="24sp" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/table0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="1dip">
+            <TableRow>
+
+                <ToggleButton
+                    android:id="@+id/order_type"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:text="MARKET"
+                    android:textOff="市价"
+                    android:textOn="限价"
+                    android:background="@drawable/toggle_day_bg_selector" />
+
+                <Button
+                    android:id="@+id/condition_order"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:text=">="
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/cancel_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="撤单"
+                    android:textSize="14sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="1dip">
+            <TableRow>
+
+                <ToggleButton
+                    android:id="@+id/loss_and_profit"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:text="MARKET"
+                    android:textOff="止损"
+                    android:textOn="止盈" />
+
+                <Switch
+                    android:id="@+id/Switch1"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="止盈止损" />
+                <Button
+                    android:id="@+id/order_side"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="一键平仓"
+                    android:textSize="14sp" />
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:id="@+id/table3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="1dip">
+            <TableRow>
+                <Button
+                    android:id="@+id/lever"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:textSize="8sp" />
+                <ToggleButton
+                    android:id="@+id/Fibonacci"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:text="Fibonacci"
+                    android:textOff="起点"
+                    android:textOn="终点" />
+                <Button
+                    android:id="@+id/choise_coin"
+                    android:layout_width="90dip"
+                    android:layout_height="wrap_content"
+                    android:foregroundTint="#FFFFFF"
+                    android:text="ALICE"
+                    android:textAlignment="center"
+                    android:textColor="#F44336"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/change_coin"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content"
+                    android:text="15m"
+                    android:textSize="14sp" />
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:id="@+id/table2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="1dip">
+            <TableRow>
+                <SeekBar
+                    android:id="@+id/position"
+                    style="@android:style/Widget.Material.SeekBar.Discrete"
+                    android:layout_width="120dip"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:foregroundTint="#FFFFFF"
+                    android:max="100"
+                    android:progress="10"
+                    android:scrollbarSize="4dp" />
+                <CheckedTextView
+                    android:id="@+id/current_positon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="仓位"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
